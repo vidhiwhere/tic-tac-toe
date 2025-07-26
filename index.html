@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-pink-200 via-purple-200 to-blue-200 flex items-center justify-center h-screen">
+  <div class="bg-white p-8 rounded-3xl shadow-2xl text-center max-w-md w-full">
+    <h1 class="text-4xl font-bold mb-6 text-purple-600" style="font-family: 'Comic Neue', cursive;">Tic Tac Toe 🌈</h1>
+    <p id="status" class="text-2xl mb-4 text-pink-500 font-semibold" style="font-family: 'Comic Neue', cursive;">Player 🌟's Turn</p>
+    <div id="timer" class="mb-4">
+      <div class="text-sm text-gray-600" style="font-family: 'Comic Neue', cursive;">Time Left: <span id="timeLeft">10</span>s</div>
+      <div class="w-full bg-gray-200 rounded-full h-2.5">
+        <div id="timerBar" class="bg-pink-500 h-2.5 rounded-full" style="width: 100%; transition: width 10s linear;"></div>
+      </div>
+    </div>
+    <div id="board" class="grid grid-cols-3 gap-3 mb-6">
+      <div class="cell bg-yellow-100 border-4 border-yellow-300 rounded-xl" data-index="0"></div>
+      <div class="cell bg-yellow-100 border-4 border-yellow-300 rounded-xl" data-index="1"></div>
+      <div class="cell bg-yellow-100 border-4 border-yellow-300 rounded-xl" data-index="2"></div>
+      <div class="cell bg-yellow-100 border-4 border-yellow-300 rounded-xl" data-index="3"></div>
+      <div class="cell bg-yellow-100 border-4 border-yellow-300 rounded-xl" data-index="4"></div>
+      <div class="cell bg-yellow-100 border-4 border-yellow-300 rounded-xl" data-index="5"></div>
+      <div class="cell bg-yellow-100 border-4 border-yellow-300 rounded-xl" data-index="6"></div>
+      <div class="cell bg-yellow-100 border-4 border-yellow-300 rounded-xl" data-index="7"></div>
+      <div class="cell bg-yellow-100 border-4 border-yellow-300 rounded-xl" data-index="8"></div>
+    </div>
+    <div id="scoreboard" class="text-lg mb-6 text-purple-600" style="font-family: 'Comic Neue', cursive;"></div>
+    <button id="restart" class="bg-pink-500 text-white px-6 py-3 rounded-full hover:bg-pink-600 transform hover:scale-105 transition-all duration-200 text-lg font-semibold" style="font-family: 'Comic Neue', cursive;">Restart Game 🎉</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
